@@ -72,4 +72,49 @@ public class ProdutoTest {
                 .log().all() // Isso imprime a resposta completa do servidor (incluindo o erro detalhado!)
                 .statusCode(201);
     }
+
+    @Test
+    @DisplayName("Listar produtos cadastrados")
+    public void ListarProdutos(){
+        given()
+            .log().all()
+            .header("token", this.token)
+            .contentType("application/json")
+        .when()
+            .get("/v2/produtos")
+        .then()
+            .log().all() // Isso imprime a resposta completa do servidor (incluindo o erro detalhado!)
+            .statusCode(200);
+    }
+
+    @Test
+    @DisplayName("LIstar um produto especifico")
+    public void ListarProdutoEspecifico(){
+        given()
+            .log().all()
+            .header("token", this.token)
+            .contentType("application/json")
+        .when()
+            .get("/v2/produtos/1046868")
+        .then()
+            .log().all() // Isso imprime a resposta completa do servidor (incluindo o erro detalhado!)
+            .statusCode(200);
+    }
+
+    @Test
+    @DisplayName("Alterar um produto especifico")
+    public void AlterarProdutoEspecifico(){
+        Produto produto = ProdutoFactory.criarProdutoComum("Neil", 200, "Dias");
+
+        given()
+            .log().all()
+            .header("token", this.token)
+            .contentType("application/json")
+            .body(produto)
+        .when()
+            .put("/v2/produtos/1046868")
+        .then()
+            .log().all()
+            .statusCode(200);
+    }
 }

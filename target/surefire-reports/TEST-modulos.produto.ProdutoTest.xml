@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="modulos.produto.ProdutoTest" time="6.437" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="modulos.produto.ProdutoTest" time="4.289" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,8 +13,9 @@
     <property name="user.country" value="PT"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/home/begas/.sdkman/candidates/java/25.0.1-amzn/lib"/>
-    <property name="sun.java.command" value="/home/begas/Documentos/Meus-Projectos/iterasys/api/target/surefire/surefirebooter-20260715153706546_3.jar /home/begas/Documentos/Meus-Projectos/iterasys/api/target/surefire 2026-07-15T15-37-06_351-jvmRun1 surefire-20260715153706546_1tmp surefire_0-20260715153706546_2tmp"/>
+    <property name="sun.java.command" value="/home/begas/Documentos/Meus-Projectos/iterasys/api/target/surefire/surefirebooter-20260715230825895_3.jar /home/begas/Documentos/Meus-Projectos/iterasys/api/target/surefire 2026-07-15T23-08-25_714-jvmRun1 surefire-20260715230825895_1tmp surefire_0-20260715230825895_2tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="modulos.produto.ProdutoTest#AlterarProdutoEspecifico"/>
     <property name="surefire.test.class.path" value="/home/begas/Documentos/Meus-Projectos/iterasys/api/target/test-classes:/home/begas/Documentos/Meus-Projectos/iterasys/api/target/classes:/home/begas/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.4/junit-jupiter-api-5.13.4.jar:/home/begas/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/begas/.m2/repository/org/junit/platform/junit-platform-commons/1.13.4/junit-platform-commons-1.13.4.jar:/home/begas/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/begas/.m2/repository/io/rest-assured/rest-assured/6.0.1/rest-assured-6.0.1.jar:/home/begas/.m2/repository/org/apache/groovy/groovy/5.0.3/groovy-5.0.3.jar:/home/begas/.m2/repository/org/apache/groovy/groovy-xml/5.0.3/groovy-xml-5.0.3.jar:/home/begas/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/begas/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/begas/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/begas/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/begas/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/begas/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/begas/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/begas/.m2/repository/io/rest-assured/json-path/6.0.1/json-path-6.0.1.jar:/home/begas/.m2/repository/org/apache/groovy/groovy-json/5.0.3/groovy-json-5.0.3.jar:/home/begas/.m2/repository/io/rest-assured/rest-assured-common/6.0.1/rest-assured-common-6.0.1.jar:/home/begas/.m2/repository/io/rest-assured/xml-path/6.0.1/xml-path-6.0.1.jar:/home/begas/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/home/begas/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.2/jackson-databind-2.18.2.jar:/home/begas/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.2/jackson-annotations-2.18.2.jar:/home/begas/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.2/jackson-core-2.18.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/begas"/>
@@ -28,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/begas/Documentos/Meus-Projectos/iterasys/api/target/surefire/surefirebooter-20260715153706546_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/begas/Documentos/Meus-Projectos/iterasys/api/target/surefire/surefirebooter-20260715230825895_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.1+8-LTS"/>
     <property name="user.name" value="begas"/>
@@ -57,10 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="validarLimitesValorProduto" classname="modulos.produto.ProdutoTest" time="5.246"/>
-  <testcase name="CadastrarProduto" classname="modulos.produto.ProdutoTest" time="1.157">
-    <system-out><![CDATA[Request method:	POST
-Request URI:	http://165.227.93.41/lojinha/v2/produtos
+  <testcase name="AlterarProdutoEspecifico" classname="modulos.produto.ProdutoTest" time="4.261">
+    <system-out><![CDATA[Request method:	PUT
+Request URI:	http://165.227.93.41/lojinha/v2/produtos/1046868
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -74,7 +74,7 @@ Multiparts:		<none>
 Body:
 {
     "produtoNome": "Neil",
-    "produtoValor": 100.0,
+    "produtoValor": 200.0,
     "produtoCores": [
         "preto",
         "Amarelo"
@@ -87,33 +87,30 @@ Body:
         }
     ]
 }
-HTTP/1.1 201 Created
-Date: Wed, 15 Jul 2026 14:37:13 GMT
+HTTP/1.1 200 OK
+Date: Wed, 15 Jul 2026 22:08:30 GMT
 Server: Apache/2.4.29 (Ubuntu)
-Content-Length: 275
+Content-Length: 269
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json
 
 {
     "data": {
-        "produtoId": 1046867,
+        "produtoId": 1046868,
         "produtoNome": "Neil",
-        "produtoValor": 100,
-        "produtoCores": [
-            "preto",
-            "Amarelo"
-        ],
+        "produtoValor": 200,
+        "produtoCores": "preto,Amarelo",
         "produtoUrlMock": "Dias",
         "componentes": [
             {
-                "componenteId": 1070327,
+                "componenteId": 1070331,
                 "componenteNome": "Pessoa",
                 "componenteQuantidade": 1
             }
         ]
     },
-    "message": "Produto adicionado com sucesso",
+    "message": "Produto alterado com sucesso",
     "error": ""
 }
 ]]></system-out>
