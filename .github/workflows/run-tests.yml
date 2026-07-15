@@ -1,0 +1,41 @@
+name: Execução de Testes de API da Lojinha
+
+# Define quando a pipeline será disparada
+on:
+  push:
+    branches: ["main", "master"] # Roda sempre que houver push nessas branches
+  pull_request:
+    branches: ["main", "master"] # Roda ao abrir Pull Requests
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Máquina virtual Linux limpa
+
+    steps:
+      # 1. Faz o download do seu código do repositório para dentro da máquina virtual
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      # 2. Configura o ambiente Java (JDK 17 como definido no seu pom.xml)
+      - name: Configurar o Java JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+          cache: "maven" # Faz cache das dependências do pom.xml para acelerar as próximas execuções
+
+      # 3. Roda os testes automáticos injetando as variáveis seguras
+      - name: Executar os Testes com Maven
+        env:
+          LOJINHA_USER: ${{ secrets.LOJINHA_USER }}
+          LOJINHA_PASSWORD: ${{ secrets.LOJINHA_PASSWORD }}
+        run: mvn clean test
+
+      # 4. Salva os relatórios de teste do Surefire se algo der errado (Opcional, mas ajuda muito)
+      - name: Publicar Relatório de Testes
+        if: always() # Garante que os relatórios serão salvos mesmo se os testes falharem
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-de-testes
+          path: target/surefire-reports/
